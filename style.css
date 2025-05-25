@@ -1,0 +1,101 @@
+body{
+    background-image: -webkit-linear-gradient(top, #ff0000, #0000ff);
+    background-image: linear-gradient(to bottom, #ff0000, #0000ff);
+}
+
+._body{
+    position: relative;
+    margin: auto;
+    width: 99%;
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+@font-face {
+  font-family: '标题字体';
+  src: url('fonts/SourceHanSansSC-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: '正文字体';
+  src: url('fonts/SourceHanSerifSC-Light.otf') format('opentype');
+}
+
+h1{
+    font-size: 3.8vh;
+    font-family: '标题字体';
+    text-decoration: none;
+    color: #000;
+}
+
+h1:hover{
+    font-size: 4.8vh;
+    color: #fff;
+    transition: 300ms;
+}
+
+p{
+    font-size: 2.5vh;
+    font-family: '正文字体';
+    text-decoration: none;
+}
+
+p:hover{
+    font-size: 2.55vh;
+    font-family: '标题字体';
+    transition: 300ms;
+}
+
+a{
+    font-size: 2.1vh;
+    color: #fff;
+    font-family: '正文字体';
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: 2.2vh;
+    color: #00daaa;
+    transition: 300ms;
+}
+
+div{
+    margin: auto 0;
+}
+
+img{
+    margin: 5px;
+}
+
+.an{
+    background: #000000;
+    color: #ffffff;
+}
+
+.tp-1{
+    width: 98%;
+    background: #ffffffc4;
+}
+
+.tp-1:hover{
+    width: 100%;
+    background-color: #000000da;
+    transition: 300ms;
+}
+
+.A01{
+    position: fixed;
+    height: 10.87vh;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    background: #000000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.A01-1{
+    width: 100%;
+    height: 3.87vh;
+    background: #1f1f1fda;
+}
