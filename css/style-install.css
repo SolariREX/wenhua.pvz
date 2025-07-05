@@ -1,0 +1,26 @@
+.header{
+    width: 99.8%;
+    margin: auto;
+    height: 3.2vh;
+    position: sticky;
+    top: 0;
+    background: #0f0f0f;
+    z-index: 9999; /* 数值越大，层级越高 */
+}
+
+.content{
+    text-align: left;
+}
+
+.yuanjiao-01{
+    width: 20vh;
+    height: 20vh ;
+    border-radius: 30px;
+}
+
+.yuanjiao-02{
+    width: 10vh;
+    height: 3.7vh;
+    border-radius: 30px;
+    background: #000000;
+}
