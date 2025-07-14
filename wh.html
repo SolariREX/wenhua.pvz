@@ -43,5 +43,39 @@
             <p> 易峰 & Creeper-1145</p>
         </div>
     </div>
+    <div id="cursor-container"></div>
+    <script>
+        (function() {
+            const container = document.getElementById('cursor-container');
+            const colors = ['#00daaa', '#FF1361', '#FFF800', '#44107A'];
+            let dots = [];
+
+            document.addEventListener('mousemove', (e) => {
+                const dot = document.createElement('div');
+                dot.classList.add('cursor-dot');
+                dot.style.left = `${e.clientX}px`;
+                dot.style.top = `${e.clientY}px`;
+                const angle = Math.random() * Math.PI * 2;
+                const radius = Math.random() * 80;
+                const dx = Math.cos(angle) * radius;
+                const dy = Math.sin(angle) * radius;
+                dot.style.setProperty('--dx', dx);
+                dot.style.setProperty('--dy', dy);
+                dot.style.backgroundColor = 'white';
+                dot.style.opacity = '0.8';
+                container.appendChild(dot);
+
+                dots.push(dot);
+                setTimeout(() => {
+                    setTimeout(() => dot.remove(), 300);
+                }, 500);
+
+                if (dots.length > 20) {
+                    const oldestDot = dots.shift();
+                    oldestDot.remove();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>

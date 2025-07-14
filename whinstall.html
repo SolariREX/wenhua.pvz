@@ -23,7 +23,7 @@
         <div style="display: flex; align-items: center;">
             <p style="margin: 0; margin-right: 10px;">wenhua版，最好的pvz体验</p>
             <div class="yuanjiao-02" style="flex-shrink: 0;margin-left: auto">
-                <a href="https://www.123912.com/s/G9Q7jv-jV1Fd"><center><p style="color: white; margin: 0;">获取</p></center></a>
+                <a href="https://www.123912.com/s/G9Q7jv-RN4Fd"><center><p style="color: white; margin: 0;">获取</p></center></a>
             </div>
         </div>
         <div>
@@ -33,5 +33,34 @@
             </center>
         </div>
     </div>
+    <div id="cursor-container"></div>
+
+    <script>
+        (function() {
+            const container = document.getElementById('cursor-container');
+            let dots = [];
+
+            document.addEventListener('mousemove', (e) => {
+                const dot = document.createElement('div');
+            const angle = Math.random() * Math.PI * 2;
+            const radius = Math.random() * 80;
+            const dx = Math.cos(angle) * radius;
+            const dy = Math.sin(angle) * radius;
+            dot.classList.add('cursor-dot');
+            dot.style.left = `${e.clientX}px`;
+            dot.style.top = `${e.clientY}px`;
+            dot.style.setProperty('--dx', dx);
+            dot.style.setProperty('--dy', dy);
+            dot.style.opacity = '0.8';
+                container.appendChild(dot);
+
+                dots.push(dot);
+                setTimeout(() => {
+                    dot.remove();
+                    dots = dots.filter(d => d !== dot);
+                }, 1000);
+            });
+        })();
+    </script>
 </body>
 </html>
